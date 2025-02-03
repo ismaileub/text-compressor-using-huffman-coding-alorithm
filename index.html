@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Text Compressor</title>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <h2>Compress Your Text File Using Huffman Coding Algorithm</h2>
+    </nav>
+
+    <main class="container">
+
+        <section class="upload-section">
+
+            <h2>Upload Your Text File</h2>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileUpload" accept=".txt" />
+                <div class="buttons">
+                    <button type="button" id="compressButton">Compress</button>
+                    <button type="button" id="decompressButton">Decompress</button>
+                </div>
+            </form>
+
+        </section>
+
+
+        <section class="info-section">
+            <h3>About Huffman Coding</h3>
+            <p>
+                Huffman Coding is a popular lossless data compression algorithm.
+                It assigns variable-length codes to input characters, with shorter
+                codes for more frequent characters, thereby minimizing the overall file size.
+            </p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Text Compressor. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
