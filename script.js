@@ -1,41 +1,40 @@
 let uploadedFile = null;
 
-// Function to handle file selection
 document.getElementById('fileUpload').addEventListener('change', function (e) {
     uploadedFile = e.target.files[0];
 });
 
-// Handle Compression
+
 function handleCompress() {
     if (!uploadedFile) {
         alert('Please upload a file first!');
         return;
     }
 
-    // Check if file is already compressed (by file extension)
+
     if (uploadedFile.name.endsWith('.huff')) {
         alert('This file is already compressed!');
         return;
     }
 
-    // Call your compression function here (compressFile)
+
     compressFile(uploadedFile);
 }
 
-// Handle Decompression
+
 function handleDecompress() {
     if (!uploadedFile) {
         alert('Please upload a file first!');
         return;
     }
 
-    // Check if file is already decompressed (by file extension)
+
     if (uploadedFile.name.endsWith('.txt')) {
         alert('This file is already decompressed!');
         return;
     }
 
-    // Call your decompression function here (decompressFile)
+
     decompressFile(uploadedFile);
 }
 
@@ -108,7 +107,7 @@ function decodeBinary(binaryString, root) {
     return result;
 }
 
-// 🟢 Compress
+
 function compressFile(File) {
 
 
@@ -149,7 +148,7 @@ function compressFile(File) {
     reader.readAsText(file);
 }
 
-// 🔴 Decompress
+
 function decompressFile(File) {
 
 
