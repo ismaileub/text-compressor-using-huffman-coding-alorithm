@@ -18,19 +18,17 @@
     <main class="container">
 
         <section class="upload-section">
+            <h2>Upload Your File to Compress or Decompress</h2>
 
-            <h2>Upload Your Text File</h2>
-
-            <form action="#" method="post" enctype="multipart/form-data">
-                <input type="file" id="fileUpload" accept=".txt" />
+            <form id="fileForm" action="#" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileUpload" accept=".txt,.huff" />
                 <div class="buttons">
-                    <button type="button" id="compressButton">Compress</button>
-                    <button type="button" id="decompressButton">Decompress</button>
+                    <button type="button" id="compressButton" onclick="handleCompress()">Compress</button>
+                    <button type="button" id="decompressButton" onclick="handleDecompress()">Decompress</button>
                 </div>
             </form>
 
         </section>
-
 
         <section class="info-section">
             <h3>About Huffman Coding</h3>
@@ -42,10 +40,11 @@
         </section>
     </main>
 
-
     <footer>
         <p>&copy; 2025 Text Compressor. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <script src="./script.js"></script>
 </body>
